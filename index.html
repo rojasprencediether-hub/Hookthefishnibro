@@ -1,0 +1,1013 @@
+<!doctype html>
+<html lang="en"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260930-01-654dee8","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script><script src="/_sdk/6542d56fbfe7a3eb.telemetry_sdk.js" integrity="sha512-ECdM0nK7EkwDuOqho2qxgyRQXyBHk9hZqRKMBr+Xsu6zjeHlt+qkO2N2YRiHN7Kg4e1fEHDhjIp4bGJYVypv1g=="></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hook the Fish: Coding Fundamentals &amp; Python Logic</title>
+  <style>
+    :root{
+      --navy:#06243c;--deep:#073d5d;--teal:#087f91;--cyan:#38d5dd;--foam:#f7ffff;
+      --gold:#ffe05d;--orange:#f36a3d;--ink:#17384d;--green:#147d57;--red:#ad3d39;
+      --shadow:0 22px 60px #06182b77;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;min-width:0}
+    body{font-family:"DM Sans",Verdana,sans-serif;color:var(--ink);background:#075774}
+    button,input,textarea{font:inherit}
+    button{cursor:pointer}
+    button:disabled{cursor:not-allowed;opacity:.55}
+    button:focus-visible,input:focus-visible,textarea:focus-visible{outline:4px solid var(--gold);outline-offset:3px}
+    #app{width:100%;min-height:calc(100 * min(var(--vh,1vh),1vh));overflow:hidden;position:relative;background:linear-gradient(145deg,#0b7090 0%,#26bccc 45%,#083d68 100%)}
+    #app:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.11;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:32px 32px}
+    .screen{display:none;min-height:calc(100 * min(var(--vh,1vh),1vh));position:relative;z-index:1}
+    .screen.active{display:block}
+    .wrap{width:100%;max-width:1160px;margin:auto;padding:26px 18px 54px}
+    .top,.hud,.stage-nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .top{justify-content:space-between;color:#fff}
+    .badge{border:1px solid #ffffff99;border-radius:999px;padding:8px 13px;font-size:.74rem;font-weight:900;letter-spacing:.08em}
+    .greeting{font-weight:bold}
+    .hero{margin-top:20px;padding:clamp(24px,5vw,54px);display:grid;grid-template-columns:1.15fr .85fr;gap:28px;background:#fff;border-radius:30px;box-shadow:var(--shadow);overflow:hidden;position:relative}
+    .hero:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-38px;height:92px;background:radial-gradient(ellipse at center,#d9fbfc 0 39%,transparent 41%) 0 0/88px 48px;opacity:.72;animation:drift 8s linear infinite}
+    .hero>*{position:relative;z-index:1}
+    .eyebrow{color:#087f91;font-weight:900;letter-spacing:.13em;font-size:.75rem}
+    h1,h2,h3{font-family:Georgia,serif}
+    .hero h1,.course-title,.stage-title,.modal h2,.card h2{color:#073557}
+    .hero h1{font-size:clamp(3rem,7vw,5.2rem);line-height:.9;margin:14px 0}
+    .hero p{line-height:1.55}
+    .btn{border:0;border-radius:13px;padding:13px 18px;font-weight:900;transition:.18s transform,.18s filter}
+    .btn:hover:not(:disabled){transform:translateY(-2px);filter:brightness(1.06)}
+    .primary{color:#fff;background:var(--orange);box-shadow:0 5px 0 #ad3d27}
+    .navy{color:#fff;background:var(--deep);box-shadow:0 5px 0 #031f34}
+    .soft{color:#073557;background:#e5f9fa}
+    .danger{color:#9e342e;background:#fff0ed}
+    .catch{background:linear-gradient(145deg,#073c5a,#00737d);color:#fff;padding:27px;border-radius:23px;position:relative;overflow:hidden}
+    .catch:after{content:"</>";position:absolute;right:-14px;bottom:-52px;font:900 9rem monospace;color:#ffffff14}
+    .catch h2{color:#fff;margin:0;font-size:1.8rem}
+    .pills{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+    .pill{color:#075067;background:#d9fbfc;border-radius:999px;padding:7px 11px;font:800 .86rem monospace}
+    .progress{height:11px;border-radius:999px;background:#ffffff38;overflow:hidden}
+    .progress b{display:block;height:100%;width:0;background:var(--gold);transition:.3s}
+    .course-title,.stage-title{color:#fff;font-size:clamp(2rem,4vw,3rem);margin:42px 0 15px}
+    .stage-grid,.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .stage{border:0;border-radius:18px;padding:20px;text-align:left;background:#fff;box-shadow:0 10px 24px #062b4e33;min-height:176px}
+    .stage.locked{background:#d8e8ec;color:#637882}
+    .stage small{color:#087f91;font-weight:bold}
+    .stage h3{margin:9px 0;font-size:1.25rem}
+    .stage p{line-height:1.42;font-size:.92rem}
+    .how{padding:20px;border-radius:18px;background:#fff;box-shadow:0 10px 24px #062b4e33}
+    .how svg{width:43px;height:43px;padding:9px;border-radius:12px;background:#d9fbfc;color:#087f91}
+    .how h3{margin:12px 0 7px}.how p{margin:0;line-height:1.45;color:#58717d}
+    .dashboard{margin-top:18px;padding:18px;border-radius:18px;background:#062b4e;color:#fff;box-shadow:0 10px 24px #062b4e33}
+    .dashboard h2{margin:0 0 12px;font-size:1.3rem;color:#fff}
+    .monitor-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .monitor{padding:11px;border-radius:10px;background:#ffffff12;font-size:.88rem;line-height:1.5}
+    .hud{padding:13px clamp(14px,3vw,33px);color:#fff;background:#091d31}
+    .logo{margin-right:auto;font-size:1.18rem}
+    .stat{font-size:.88rem;font-weight:bold}
+    .exit{color:#fff;border:1px solid #80b7d0;background:transparent;box-shadow:none;padding:9px 12px}
+    .tabs{display:flex;gap:9px;overflow:auto;padding:11px clamp(14px,3vw,33px);background:#bcecf4}
+    .tab{white-space:nowrap;border:0;border-radius:999px;padding:9px 13px;color:#064464;background:#effdff;font-weight:bold}
+    .tab.active{color:#fff;background:#087f91}.tab:disabled{opacity:1;color:#67808a;background:#d3e2e5}
+    .ocean{position:relative;overflow:hidden;min-height:540px;height:calc(100 * min(var(--vh,1vh),1vh) - 115px);background:linear-gradient(#9ceff0 0%,#38bfce 28%,#087ba0 58%,#03446d 100%)}
+    .sun{position:absolute;right:7%;top:5%;width:72px;height:72px;border-radius:50%;background:#ffe560;box-shadow:0 0 0 13px #ffe56044}
+    .surface{position:absolute;top:23%;left:-10%;width:120%;height:21px;border-top:3px solid #fff9;border-bottom:2px solid #fff6;animation:wave 3.5s ease-in-out infinite}
+    .surface.b{top:27%;opacity:.55;animation-delay:-1.4s}
+    .boat{position:absolute;z-index:4;left:5%;top:8%;width:165px}
+    .cabin{width:58px;height:31px;margin-left:42px;background:#ffe9a7;border:5px solid #874a23;border-bottom:0;border-radius:8px 8px 0 0}
+    .hull{height:37px;border-bottom:8px solid #542f1a;border-radius:10px 10px 42px 42px;background:#874a23}
+    .rod{width:125px;height:4px;margin:-28px 0 0 103px;transform:rotate(27deg);transform-origin:left;background:#542f1a}
+    .line{position:absolute;top:42px;left:169px;height:140px;transform:rotate(27deg);transform-origin:top;border-left:2px solid #fff}
+    .bubble{position:absolute;border:2px solid #ffffff99;border-radius:50%;animation:bubble 6s linear infinite}
+    .fish{position:absolute;z-index:6;width:var(--size);height:calc(var(--size)*.62);border:0;padding:0;background:transparent;filter:drop-shadow(0 4px 3px #04233b55);touch-action:manipulation}
+    .fish svg{width:100%;height:100%}.fish.reel{pointer-events:none;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+    .splash{position:absolute;z-index:8;width:28px;height:14px;pointer-events:none;border:4px solid #fff;border-radius:50%;animation:splash .7s ease-out forwards}
+    .panel{position:absolute;z-index:20;top:54%;left:50%;width:min(630px,calc(100% - 28px));transform:translate(-50%,-50%);padding:23px;border-radius:23px;background:#fff;box-shadow:var(--shadow)}
+    .panel h2{margin:8px 0}.meta{display:flex;justify-content:space-between;gap:10px;color:#087f91;font-size:.84rem;font-weight:bold}
+    .code,.task,.study-code{padding:12px;border-radius:11px;color:#e9fcff;background:#062b4e;white-space:pre-wrap;font:.87rem/1.48 monospace}
+    .answers{display:grid;gap:9px}.answer{padding:13px;border:2px solid #cae7ed;border-radius:12px;color:#183e54;background:#f8ffff;text-align:left;font-weight:bold}
+    .answer.good{border-color:#259565;background:#d9f7e5}.answer.bad{border-color:#d55a50;background:#ffe2dd}
+    .feedback{min-height:28px;font-weight:bold;line-height:1.43}.ok{color:var(--green)}.no{color:var(--red)}.hidden{display:none!important}
+    .lab{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px}.card{padding:23px;border-radius:21px;background:#fff;box-shadow:0 16px 34px #062b4e44}
+    .card h2{margin-top:5px}.editor-wrap{display:grid;grid-template-columns:45px 1fr;min-height:280px;overflow:hidden;border:2px solid #badde5;border-radius:13px;background:#041f39}
+    .lines{padding:13px 8px;color:#80bac9;background:#062b4e;text-align:right;white-space:pre;font:.93rem/1.55 monospace}
+    .editor{width:100%;min-height:280px;padding:13px;border:0;outline:0;resize:vertical;color:#e6fbff;background:#041f39;font:.93rem/1.55 monospace;tab-size:4}
+    .buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:13px}
+    .output{min-height:76px;margin-top:13px;padding:13px;border-radius:12px;background:#eaf9fa;white-space:pre-wrap;line-height:1.45}
+    .quiz{max-width:730px;margin:auto}.certificate{padding:18px;border-radius:20px;background:#fff;box-shadow:var(--shadow)}canvas{display:block;width:100%;height:auto;border-radius:10px}
+    .shade{position:fixed;z-index:100;inset:0;display:grid;place-items:center;padding:18px;background:#01192dbb}.shade[hidden]{display:none}
+    .modal{width:min(570px,100%);max-height:90%;overflow:auto;padding:27px;border-radius:22px;background:#fff;box-shadow:var(--shadow)}
+    .field{display:grid;gap:6px;margin:12px 0;font-weight:bold}.field input{padding:12px;border:2px solid #b8dce4;border-radius:11px}
+    .error{min-height:21px;color:#ad332d;font-weight:bold;font-size:.9rem}
+    @keyframes wave{50%{transform:translateY(8px)}}@keyframes bubble{from{transform:translateY(0);opacity:0}15%{opacity:1}to{transform:translateY(-430px);opacity:0}}@keyframes splash{to{transform:scale(3);opacity:0}}@keyframes drift{to{background-position:88px 0}}
+    @media(max-width:780px){.hero,.lab{grid-template-columns:1fr}.stage-grid,.how-grid,.monitor-grid{grid-template-columns:1fr}.hud .logo{width:100%}.boat{transform:scale(.8);transform-origin:top left}.ocean{min-height:500px}.panel{padding:18px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/6c2ecc939521f244.data_sdk.js" type="text/javascript" integrity="sha512-gRx8s+XsZDN6mSIQu2sivLZysbV0WHhb5kXNUWlgVb5lCMU1foJYukyMEDPv8Tnoocb8iwqB4XdRrWc7oEGzIQ=="></script>
+  <script src="/_sdk/6e4b845d05dd79e4.editing_sdk.js" type="text/javascript" integrity="sha512-nfDAoBO2Sn6o6rLYgdnzgUs0nZfi4v1NV7M2ioocHZ6oj+ZnIEUmJGLGqFu2dnCue3Bjs5kWMae4qsFt05LfIA=="></script>
+  <script src="/_sdk/ddcab3e45959c817.resizing_sdk.js" type="text/javascript" integrity="sha512-VAviUKfZVzugWBSeULYjSljTX+nb84wc6Zzbx5GQaQgh6X2ISSjXi8eIiCDGdwDh10esJMY0+QFQgUy9NcrTlQ=="></script>
+ </head>
+ <body data-template-id="__page-root" style="background: linear-gradient(145deg, rgb(11, 112, 144), rgb(8, 61, 104));">
+  <div id="app">
+   <main id="home" class="screen active">
+    <div class="wrap">
+     <header class="top"><span class="badge">PHYTON BASIC PROGRAMMING- ICT-10</span> <span id="greeting" class="greeting" aria-live="polite"></span>
+     </header>
+     <section class="hero">
+      <div>
+       <p class="eyebrow">CODING CHALLENGE</p>
+       <h1>Hook the Fish</h1>
+       <p>Master Variables &amp; Data Types while catching fish!</p><button id="startGame" class="btn primary" type="button">Start Game →</button>
+       <div class="buttons"><button id="soundHome" class="btn soft" type="button">🔊 Sound On</button> <button id="reset" class="btn danger" type="button">Reset Account</button>
+       </div>
+       <div id="resetBox" class="hidden output"><b>Reset this account?</b><br>
+         Course progress and student details will be cleared. 
+        <div class="buttons"><button id="resetYes" class="btn danger" type="button">Yes, Reset</button> <button id="resetNo" class="btn soft" type="button">Cancel</button>
+        </div>
+       </div>
+      </div>
+      <aside class="catch">
+       <h2>Today's Coding Catch</h2>
+       <p>A practical ocean adventure for variables, data types, conditions, and simple conditionals.</p>
+       <div class="pills"><span class="pill">int</span><span class="pill">float</span><span class="pill">boolean</span><span class="pill">string</span>
+       </div>
+       <p><b>Current score:</b> <span id="homeScore">0</span></p>
+       <p><b>Course progress:</b> <span id="homeProgress">0%</span></p>
+       <div class="progress">
+        <b id="bar"></b>
+       </div>
+      </aside>
+     </section>
+     <section class="dashboard" aria-label="Student Progress Dashboard">
+      <h2>Student Progress Dashboard</h2>
+      <div id="monitorGrid" class="monitor-grid"></div>
+     </section>
+     <h2 class="course-title">Your Course Map</h2>
+     <section id="stages" class="stage-grid" aria-label="Course stages"></section>
+     <h2 class="course-title">How to Play</h2>
+     <section class="how-grid">
+      <article class="how">
+       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M3 4v5m0-5 4 3-4 2M3 9c2 3 4 4 7 4"></path><path d="M12 13c3-4 6-4 9 0-3 4-6 4-9 0Z"></path><circle cx="17" cy="13" r=".7" fill="currentColor"></circle>
+       </svg>
+       <h3>Catch a fish</h3>
+       <p>Tap a swimming fish to reel in your coding question.</p>
+      </article>
+      <article class="how">
+       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="m5 12 4 4L19 6"></path><path d="M4 4h16v16H4z"></path>
+       </svg>
+       <h3>Earn +10 points</h3>
+       <p>Each correct answer earns points and course progress.</p>
+      </article>
+      <article class="how">
+       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <rect x="5" y="10" width="14" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+       </svg>
+       <h3>Unlock sequentially</h3>
+       <p>Complete every round before exploring the next destination.</p>
+      </article>
+     </section>
+    </div>
+   </main>
+   <main id="game" class="screen">
+    <header class="hud"><strong class="logo">Hook the Fish</strong> <span class="stat">Round <span id="round">1 / 4</span></span> <span id="topic" class="stat">Variables</span> <span class="stat">Score: <span id="score">0</span></span> <span id="timer" class="stat">01:30</span> <span class="stat">Progress <span id="hudProgress">0/5</span></span> <button id="soundGame" class="btn exit" type="button" aria-label="Toggle sound">🔊</button> <button id="exit" class="btn exit" type="button">← Exit to Home</button>
+    </header>
+    <nav id="tabs" class="tabs" aria-label="Lesson tabs"></nav>
+    <section id="ocean" class="ocean" aria-label="Animated ocean fishing game">
+     <div class="sun"></div>
+     <div class="surface"></div>
+     <div class="surface b"></div>
+     <div class="boat">
+      <div class="cabin"></div>
+      <div class="hull"></div>
+      <div class="rod"></div>
+      <div class="line"></div>
+     </div><span class="bubble" style="left:14%;bottom:12%;width:14px;height:14px"></span> <span class="bubble" style="left:79%;bottom:7%;width:10px;height:10px;animation-delay:2s"></span> <span class="bubble" style="left:59%;bottom:8%;width:19px;height:19px;animation-delay:4s"></span>
+     <section id="questionPanel" class="panel hidden" role="dialog" aria-modal="true" aria-labelledby="qText">
+      <div class="meta">
+       <span id="qTopic"></span><span id="qCount"></span>
+      </div>
+      <h2 id="qText"></h2>
+      <pre id="qCode" class="code hidden"></pre>
+      <div id="choices" class="answers"></div><button id="hint" class="btn soft" type="button" style="margin-top:12px">💡 Need a Hint?</button>
+      <p id="feedback" class="feedback" aria-live="polite"></p><button id="continue" class="btn navy hidden" type="button">Continue</button>
+     </section>
+    </section>
+   </main>
+   <main id="lab" class="screen">
+    <div class="wrap">
+     <div class="stage-nav">
+      <button class="btn soft homeBtn" type="button">← Exit to Home</button><strong>Score: <span class="scoreMirror">0</span></strong>
+     </div>
+     <h1 class="stage-title">Practical Python Coding Lab</h1>
+     <div class="lab">
+      <section class="card">
+       <p class="eyebrow">STAGE 5 · CHALLENGE <span id="labNum">1</span> OF 2</p>
+       <h2 id="labTitle"></h2>
+       <p id="labDesc"></p>
+       <h3>Requirements</h3>
+       <ul id="requirements"></ul>
+       <h3>Expected output</h3>
+       <pre id="expected" class="task"></pre>
+      </section>
+      <section class="card"><label for="editor"><b>Your Python code</b></label>
+       <div class="editor-wrap">
+        <div id="lines" class="lines">
+         1
+        </div><textarea id="editor" class="editor" spellcheck="false" placeholder="# Write your code here"></textarea>
+       </div>
+       <div class="buttons">
+        <button id="run" class="btn navy" type="button">Run &amp; Submit Code</button><button id="resetCode" class="btn soft" type="button">Reset Code</button>
+       </div>
+       <div id="labFeedback" class="output" aria-live="polite">
+        Write your code, then choose Run &amp; Submit Code.
+       </div><button id="nextLab" class="btn navy hidden" type="button"></button>
+      </section>
+     </div>
+    </div>
+   </main>
+   <main id="quiz" class="screen">
+    <div class="wrap">
+     <div class="stage-nav">
+      <button class="btn soft homeBtn" type="button">← Exit to Home</button><strong>Score: <span class="scoreMirror">0</span></strong>
+     </div>
+     <h1 class="stage-title">Stage 6: Final General Quiz</h1>
+     <section id="quizArea" class="card quiz"></section>
+    </div>
+   </main>
+   <main id="cert" class="screen">
+    <div class="wrap">
+     <div class="stage-nav">
+      <button class="btn soft homeBtn" type="button">← Exit to Home</button>
+     </div>
+     <section class="certificate">
+      <canvas id="certificate" width="1400" height="900" aria-label="Completion certificate"></canvas>
+     </section>
+     <div style="text-align:center;margin-top:18px">
+      <button id="download" class="btn navy" type="button">Download Certificate</button>
+     </div>
+    </div>
+   </main>
+   <div id="loginModal" class="shade" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+    <form id="loginForm" class="modal">
+     <h2 id="loginTitle">Student Login</h2>
+     <p>Enter your name to begin your ocean coding adventure.</p><label class="field" for="first">First Name<input id="first" autocomplete="given-name"></label> <label class="field" for="last">Last Name<input id="last" autocomplete="family-name"></label>
+     <p id="loginError" class="error" aria-live="polite"></p><button class="btn navy" style="width:100%" type="submit">Login / Continue</button>
+    </form>
+   </div>
+   <div id="disclaimerModal" class="shade" role="dialog" aria-modal="true" hidden="">
+    <section class="modal">
+     <h2>Before You Dive In</h2>
+     <p>This game is for educational purposes only - Sir Rojas</p><button id="ack" class="btn navy" style="width:100%" type="button">Acknowledge &amp; Continue</button>
+    </section>
+   </div>
+   <div id="studyModal" class="shade" role="dialog" aria-modal="true" hidden="">
+    <section class="modal">
+     <p class="eyebrow">MANDATORY TOPIC STUDY</p>
+     <h2 id="studyTitle"></h2>
+     <p id="studyText"></p>
+     <pre id="studyCode" class="study-code"></pre><button id="startLesson" class="btn navy" style="width:100%;margin-top:14px" type="button">Start Fishing! 🎣</button>
+    </section>
+   </div>
+   <div id="completeModal" class="shade" role="dialog" aria-modal="true" hidden="">
+    <section class="modal">
+     <p class="eyebrow">ROUND COMPLETE</p>
+     <h2>Round Completed! 🎉</h2>
+     <p id="completeText"></p><button id="completeNext" class="btn navy" style="width:100%" type="button"></button>
+    </section>
+   </div>
+  </div>
+  <script>
+    
+const sounds = {
+  splash: new Audio('splash.mp3'),   
+  correct: new Audio('correct.mp3'),
+  wrong: new Audio('wrong.mp3')       
+};
+(() => {
+  "use strict";
+  const KEY = "hook_fish_python_logic_v9";
+  const $ = id => document.getElementById(id);
+  const stages = ["Variables","Data Types","Simple If-Else","If-Elif-Else","Practical Python Coding Lab","Final General Quiz"];
+  const descriptions = [
+    "Catch exactly 5 correct fish about declaration, assignment, updates, and naming rules.",
+    "Catch exactly 5 correct fish about int, float, str, and bool.",
+    "Catch exactly 5 correct fish using simple if-else conditions.",
+    "Catch exactly 5 correct fish using flat if-elif-else decisions.",
+    "Complete both beginner Python coding challenges.",
+    "Answer exactly 10 final coding questions. Score 7/10 or higher for your certificate."
+  ];
+
+  const blank = () => ({
+    first:"", last:"", ack:false, score:0, unlocked:1, current:1,
+    lessons:{}, lab:[false,false], final:{order:[],index:0,correct:0,done:false},
+    cert:false, date:"", muted:false, updatedAt:""
+  });
+
+  let state = load();
+  let fish = [];
+  let raf = 0;
+  let started = false;
+  let questionOpen = false;
+  let active = null;
+  let timer = 90;
+  let timerHandle = 0;
+  let audioCtx = null;
+
+  function load(){
+    try{
+      const raw = localStorage.getItem(KEY);
+      if(!raw) return blank();
+      const parsed = JSON.parse(raw);
+      if(!parsed || typeof parsed !== "object") return blank();
+      const safe = blank();
+      Object.assign(safe, parsed);
+      if(!safe.lessons || typeof safe.lessons !== "object") safe.lessons = {};
+      if(!Array.isArray(safe.lab) || safe.lab.length !== 2) safe.lab = [false,false];
+      if(!safe.final || typeof safe.final !== "object") safe.final = blank().final;
+      return safe;
+    }catch(e){ return blank(); }
+  }
+
+  function save(){
+    try{
+      state.updatedAt = new Date().toISOString();
+      localStorage.setItem(KEY, JSON.stringify(state));
+    }catch(e){}
+  }
+
+  function shuffle(list){
+    const a = list.slice();
+    for(let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]] = [a[j],a[i]];
+    }
+    return a;
+  }
+
+  function esc(value){
+    return String(value).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  }
+
+  const q = (text, code, answers, correct, hint) => [text,code,answers,correct,hint];
+
+  const pools = [
+    [
+      q("Which line assigns 10 to score?","",["score = 10","10 = score","score == 10","let score"],0,"Use one equals sign to store a value."),
+      q("Which is a valid Python variable name?","",["student_age","student-age","2students","class"],0,"Names can contain underscores and cannot start with a number."),
+      q("What does = mean in Python?","",["Assign a value","Compare values","Add values","Start a comment"],0,"A single equals sign stores a value."),
+      q("What does score = score + 1 do?","",["Adds 1 to score","Compares score to 1","Resets score","Prints score"],0,"Python calculates the right side first, then stores it."),
+      q("What is wrong with 3dogs = 2?","",["It starts with a number","It uses a number","It has a value","Nothing"],0,"Variable names cannot begin with a number."),
+      q("Which variable name is clearest?","",["total_score","x","thing","a1"],0,"Descriptive names make code easier to understand."),
+      q("Which symbol begins a Python comment?","",["#","//","<!--","**"],0,"Python comments begin with a hash symbol."),
+      q("Which operator checks equality?","",["==","=","+","#"],0,"Double equals checks equality."),
+      q("What does user_age = 16 store?","",["A number in user_age","A string","A Boolean","Nothing"],0,"The variable stores the number 16."),
+      q("Why use variables?","",["To store information","To draw fish","To lock buttons","To create only text"],0,"Variables hold information for later use.")
+    ],
+    [
+      q("Which type stores a whole number?","",["int","float","string","bool"],0,"An int stores whole numbers."),
+      q("Which value is a float?","",["3.14","3","'3'","True"],0,"A decimal point indicates a float."),
+      q("Which is a string?","",["'ocean'","ocean","True","12"],0,"Quoted text is a string."),
+      q("Which is a Boolean value?","",["False","'False'","0.0","'0'"],0,"Booleans are True or False without quotes."),
+      q("What type is 25?","",["int","float","string","bool"],0,"25 is a whole number."),
+      q("What type is 7.0?","",["float","int","string","bool"],0,"7.0 includes a decimal point."),
+      q("What type is \"fish\"?","",["str","bool","float","int"],0,"Quoted text is a string."),
+      q("Which type represents yes/no?","",["bool","string","float","int"],0,"Booleans represent true and false choices."),
+      q("Which value is Boolean?","",["True","'True'","1","1.0"],0,"True without quotation marks is Boolean."),
+      q("What does type(4.5) describe?","",["float","int","string","bool"],0,"4.5 is a float.")
+    ],
+    [
+      q("What prints when score = 8?","score = 8\nif score > 5:\n    print('Win')\nelse:\n    print('Try again')",["Win","Try again","8","Nothing"],0,"Compare 8 and 5."),
+      q("What prints when age = 12?","age = 12\nif age < 10:\n    print('Child')\nelse:\n    print('Teen')",["Teen","Child","12","Nothing"],0,"Check whether 12 is less than 10."),
+      q("Which condition means at least 10?","",["score >= 10","score = 10","score >< 10","score => 10"],0,">= means greater than or equal to."),
+      q("What prints when fish = 3?","fish = 3\nif fish <= 3:\n    print('Catch')\nelse:\n    print('Wait')",["Catch","Wait","3","Nothing"],0,"Check whether 3 is less than or equal to 3."),
+      q("When does an else block run?","",["When if is False","Before if","Every time","Only for strings"],0,"Remember: An `else` block only runs when the `if` condition is False!"),
+      q("Which is a valid Python if line?","",["if score >= 5:","if score >= 5","if: score >= 5","score if >= 5:"],0,"Python if statements end with a colon."),
+      q("Why indent after if?","",["It marks the code block","It changes type","It ends code","It makes a comment"],0,"Indentation tells Python what belongs inside the block."),
+      q("What can an if condition become?","",["True or False","Only text","Only decimals","Only comments"],0,"Conditions evaluate to True or False."),
+      q("What if a condition is False with no else?","",["The block is skipped","It repeats","It becomes True","A string is made"],0,"Python skips that block."),
+      q("What prints when temp = 30?","temp = 30\nif temp < 25:\n    print('Cool')\nelse:\n    print('Warm')",["Warm","Cool","30","Nothing"],0,"30 is not below 25.")
+    ],
+    [
+      q("What prints for grade = 92?","grade = 92\nif grade >= 95:\n    print('High')\nelif grade >= 90:\n    print('Honors')\nelse:\n    print('Passed')",["Honors","High","Passed","Nothing"],0,"92 is below 95 but is at least 90."),
+      q("What does elif mean?","",["Another condition to test","End the program","A data type","A comment"],0,"elif means else if."),
+      q("Which structure is flat?","",["if / elif / else","if inside if inside if","Two nested if blocks","A loop inside a loop"],0,"A flat conditional chain has one indentation level."),
+      q("What prints for grade = 72?","grade = 72\nif grade >= 75:\n    print('Passed')\nelif grade >= 90:\n    print('Honors')\nelse:\n    print('Failed')",["Failed","Passed","Honors","Nothing"],0,"72 does not meet the first condition."),
+      q("Why use elif?","",["To test another choice","To make a float","To remove colons","To create a loop"],0,"elif checks another condition when earlier ones are false."),
+      q("Which line needs a colon?","",["elif grade >= 90:","elif grade >= 90","elif: grade >= 90","grade elif >= 90"],0,"Conditional headers always end with a colon."),
+      q("What runs if every condition is false?","",["else","if","elif","print"],0,"else handles the remaining case."),
+      q("Which is best for grade ranges?","",["if-elif-else","A deeply nested chain","Only a variable","Only print"],0,"A flat if-elif-else chain is clear for ranges."),
+      q("What prints for grade = 96?","grade = 96\nif grade >= 95:\n    print('High')\nelif grade >= 90:\n    print('Honors')\nelse:\n    print('Passed')",["High","Honors","Passed","Nothing"],0,"The first true condition runs."),
+      q("How many indentation levels should this lesson use?","",["One","Three","Four","None"],0,"Keep these simple conditionals at one indentation level.")
+    ]
+  ];
+
+  const studies = [
+    ["Variables","Variables store information. Create one with x = 5, assign values using =, and use readable names such as user_age.","x = 5\nuser_age = 16\nx = x + 1"],
+    ["Data Types","Use int for whole numbers, float for decimals, str for quotation-mark text, and bool for True or False.","fish_count = 4\nwater_temp = 27.5\nname = \"Mia\"\nis_ready = True"],
+    ["Simple If-Else","Use if and else to make decisions. Operators such as > and < test conditions.","score = 8\nif score > 5:\n    print(\"Win\")\nelse:\n    print(\"Try again\")"],
+    ["If-Elif-Else","Use a flat if-elif-else structure for multiple choices. Keep only one indentation level and avoid nested if blocks.","grade = 92\nif grade >= 95:\n    print(\"With High Honors\")\nelif grade >= 90:\n    print(\"With Honors\")\nelif grade >= 75:\n    print(\"Passed\")\nelse:\n    print(\"Failed\")"]
+  ];
+
+  function lesson(n){
+    if(!state.lessons[n]) state.lessons[n] = {ids:shuffle([...Array(10).keys()]).slice(0,5),index:0,correct:0,attempts:0};
+    return state.lessons[n];
+  }
+
+  function accuracy(n){
+    const l = state.lessons[n];
+    return !l || !l.attempts ? 0 : Math.round(l.correct/l.attempts*100);
+  }
+
+  function show(id){
+    document.querySelectorAll(".screen").forEach(el => el.classList.remove("active"));
+    $(id).classList.add("active");
+    if(id !== "game") clearInterval(timerHandle);
+    renderHome();
+  }
+
+  function renderHome(){
+    const completed = [1,2,3,4].filter(n => (state.lessons[n]?.correct || 0) >= 5).length +
+      (state.lab.every(Boolean) ? 1 : 0) + (state.final.done ? 1 : 0);
+    const pct = Math.round(completed / 6 * 100);
+
+    $("greeting").textContent = state.first ? "Hello, " + state.first + "!" : "";
+    $("homeScore").textContent = state.score;
+    $("homeProgress").textContent = pct + "%";
+    $("bar").style.width = pct + "%";
+    document.querySelectorAll(".scoreMirror").forEach(el => el.textContent = state.score);
+    $("soundHome").textContent = state.muted ? "🔇 Sound Off" : "🔊 Sound On";
+    $("soundGame").textContent = state.muted ? "🔇" : "🔊";
+
+    $("monitorGrid").innerHTML =
+      [1,2,3,4].map(n => {
+        const l = state.lessons[n];
+        const done = (l?.correct || 0) >= 5;
+        const status = done ? "Completed" : n > state.unlocked ? "Locked" : (l?.correct || 0) + "/5 Completed";
+        return `<article class="monitor"><b>Lesson ${n} ${stages[n-1]} (${status})</b><br>Score: ${(l?.correct || 0)*10}/50 · Accuracy: ${accuracy(n)}%</article>`;
+      }).join("") +
+      `<article class="monitor"><b>Stage 5 Practical Python Coding Lab (${state.lab.every(Boolean) ? "Completed" : state.unlocked < 5 ? "Locked" : state.lab.filter(Boolean).length + "/2 Passed"})</b><br>Practical Python progress</article>` +
+      `<article class="monitor"><b>Stage 6 Final Quiz & Certificate (${state.final.done ? "Completed" : state.unlocked < 6 ? "Locked" : "Ready"})</b><br>Final quiz: ${state.final.done ? state.final.correct + "/10" : "Not completed"}</article>`;
+
+    $("stages").innerHTML = stages.map((name,i) => {
+      const n = i+1;
+      const ready = n <= state.unlocked;
+      const done = n <= 4 ? (state.lessons[n]?.correct || 0) >= 5 : n === 5 ? state.lab.every(Boolean) : state.final.done;
+      return `<button class="stage ${ready ? "" : "locked"}" ${ready ? "" : "disabled"} data-stage="${n}">
+        <small>${ready ? "STAGE " + n : "🔒 LOCKED"}</small><h3>${esc(name)}</h3>
+        <p>${esc(descriptions[i])}</p><p><b>${done ? "✓ Completed" : ready ? "Ready to play →" : "Complete Stage " + (n-1) + " first"}</b></p>
+      </button>`;
+    }).join("");
+
+    document.querySelectorAll("[data-stage]").forEach(btn => btn.onclick = () => openStage(+btn.dataset.stage));
+  }
+
+  function openStage(n){
+    if(n > state.unlocked) return;
+    state.current = n;
+    save();
+    if(n <= 4){ show("game"); prepare(n); }
+    else if(n === 5){ show("lab"); renderLab(); }
+    else { show("quiz"); renderQuiz(); }
+  }
+
+  function tabs(){
+    const labels = ["① Variables","② Data Types","③ If-Else","④ Nested If-Else"];
+    $("tabs").innerHTML = labels.map((label,i) => {
+      const n = i+1, p = state.lessons[n]?.correct || 0, locked = n > state.unlocked;
+      return `<button class="tab ${n === state.current ? "active" : ""}" ${locked ? "disabled" : ""} data-tab="${n}">${locked ? "🔒 " + label.slice(2) + " Locked" : label + " " + p + "/5"}</button>`;
+    }).join("");
+    document.querySelectorAll("[data-tab]").forEach(btn => btn.onclick = () => openStage(+btn.dataset.tab));
+  }
+
+  function prepare(n){
+    started = false;
+    questionOpen = false;
+    $("questionPanel").classList.add("hidden");
+    lesson(n);
+    $("round").textContent = n + " / 4";
+    $("topic").textContent = stages[n-1];
+    $("score").textContent = state.score;
+    $("hudProgress").textContent = lesson(n).correct + "/5";
+    tabs();
+    makeFish();
+    $("studyTitle").textContent = studies[n-1][0];
+    $("studyText").textContent = studies[n-1][1];
+    $("studyCode").textContent = studies[n-1][2];
+    $("studyModal").hidden = false;
+    save();
+  }
+
+  function fishSvg(type){
+    const colors = {
+      yellow:["#ffd343","#f5af1b"],
+      cyan:["#28d9e2","#008ba8"],
+      clown:["#ff8249","#f26b3e"],
+      angel:["#8178e4","#5049ac"]
+    }[type];
+    const mark = type === "clown"
+      ? '<path d="M56 10v48M81 10v48" stroke="#fff7de" stroke-width="8"/><path d="M56 10v48M81 10v48" stroke="#243d51" stroke-width="2"/>'
+      : type === "angel" ? '<path d="M67 8v58" stroke="#39d4e4" stroke-width="7"/>' : "";
+    return `<svg viewBox="0 0 120 68" aria-hidden="true">
+      <path fill="${colors[1]}" d="M20 34 0 8v52z"/>
+      <path fill="${colors[0]}" d="M20 34C30 4 88 3 108 22c16 11 16 13 0 24C88 65 30 64 20 34Z"/>
+      ${mark}<circle cx="95" cy="25" r="5" fill="#073557"/><circle cx="93" cy="23" r="1.4" fill="#fff"/>
+      <path d="M102 41q-8 5-15 0" fill="none" stroke="#073557" stroke-width="3"/>
+    </svg>`;
+  }
+
+  function makeFish(){
+    if(fish.length) return;
+    ["yellow","cyan","clown","angel","yellow","cyan","clown","angel"].forEach((type,i) => {
+      const el = document.createElement("button");
+      el.type = "button";
+      el.className = "fish";
+      el.setAttribute("aria-label","Hook this fish for a coding question");
+      el.style.setProperty("--size",(62 + Math.random()*60) + "px");
+      el.innerHTML = fishSvg(type);
+      $("ocean").appendChild(el);
+      const item = {el,x:-120-i*145,y:150+Math.random()*280,speed:.7+Math.random(),phase:Math.random()*6,reel:false};
+      el.onclick = () => hook(item);
+      fish.push(item);
+    });
+    if(!raf) animate();
+  }
+
+  function animate(){
+    const ocean = $("ocean");
+    const w = ocean.clientWidth || innerWidth;
+    const h = ocean.clientHeight || 540;
+    fish.forEach(item => {
+      if(item.reel) return;
+      item.x += item.speed;
+      item.phase += .03;
+      if(item.x > w + 150){
+        item.x = -150 - Math.random()*250;
+        item.y = 150 + Math.random()*Math.max(190,h-270);
+        item.speed = .7 + Math.random();
+      }
+      item.el.style.transform = `translate3d(${item.x}px,${item.y + Math.sin(item.phase)*8}px,0)`;
+    });
+    raf = requestAnimationFrame(animate);
+  }
+
+  function audio(){
+    if(state.muted) return null;
+    try{
+      if(!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      return audioCtx;
+    }catch(e){ return null; }
+  }
+  
+function playSFX(type) {
+  if (state.muted) return; 
+
+  if (sfxFiles[type]) {
+    sfxFiles[type].currentTime = 0; 
+    sfxFiles[type].play().catch(e => console.log("Audio play error:", e));
+  }
+}
+
+  function tone(start,duration,type,end){
+    const ctx = audio();
+    if(!ctx) return;
+    const oscillator = ctx.createOscillator();
+    const gain = ctx.createGain();
+    oscillator.type = type;
+    oscillator.frequency.setValueAtTime(start,ctx.currentTime);
+    if(end) oscillator.frequency.exponentialRampToValueAtTime(end,ctx.currentTime+duration);
+    gain.gain.setValueAtTime(.07,ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+duration);
+    oscillator.connect(gain).connect(ctx.destination);
+    oscillator.start();
+    oscillator.stop(ctx.currentTime+duration);
+  }
+
+  function hook(item){
+    if(!started || questionOpen || item.reel) return;
+    item.reel = true;
+    item.el.classList.add("reel");
+    item.el.style.transform = "translate3d(125px,88px,0) scale(.6)";
+    const splash = document.createElement("i");
+    splash.className = "splash";
+    splash.style.left = (item.x+30)+"px";
+    splash.style.top = (item.y+25)+"px";
+    $("ocean").appendChild(splash);
+    setTimeout(() => splash.remove(),750);
+    tone(320,.18,"triangle",120);
+    setTimeout(() => tone(550,.13,"sine",380),60);
+    setTimeout(() => {
+      item.reel = false;
+      item.el.classList.remove("reel");
+      item.x = -180;
+      openQuestion();
+    },850);
+  }
+
+  function openQuestion(){
+    const l = lesson(state.current);
+    const question = pools[state.current-1][l.ids[l.index]];
+    const options = shuffle(question[2].map((text,i) => ({text,correct:i===question[3]})));
+    active = {question,options,answered:false};
+    questionOpen = true;
+    $("qTopic").textContent = stages[state.current-1];
+    $("qCount").textContent = "Correct catches: " + l.correct + "/5";
+    $("qText").textContent = question[0];
+    $("qCode").textContent = question[1];
+    $("qCode").classList.toggle("hidden",!question[1]);
+    $("feedback").textContent = "";
+    $("continue").classList.add("hidden");
+    $("choices").innerHTML = options.map((option,i) => `<button class="answer" type="button" data-choice="${i}">${"ABCD"[i]}. ${esc(option.text)}</button>`).join("");
+    document.querySelectorAll("[data-choice]").forEach(button => button.onclick = () => answer(+button.dataset.choice,button));
+    $("questionPanel").classList.remove("hidden");
+  }
+
+  $("hint").onclick = () => {
+    if(active && !active.answered){
+      $("feedback").className = "feedback";
+      $("feedback").textContent = "Hint: " + active.question[4];
+    }
+  };
+
+  function answer(i,button){
+    if(!active || active.answered) return;
+    active.answered = true;
+    const l = lesson(state.current);
+    const correct = active.options[i].correct;
+    l.attempts++;
+
+    document.querySelectorAll("[data-choice]").forEach((btn,n) => {
+      btn.disabled = true;
+      if(active.options[n].correct) btn.classList.add("good");
+    });
+
+    if(correct){
+      l.correct++;
+      state.score += 10;
+      tone(530,.12,"sine",750);
+      setTimeout(() => tone(760,.16,"sine",960),100);
+      $("feedback").className = "feedback ok";
+      $("feedback").textContent = "Correct! +10 points. " + active.question[4];
+    }else{
+      button.classList.add("bad");
+      tone(160,.3,"sawtooth",95);
+      $("feedback").className = "feedback no";
+      $("feedback").textContent = "Not quite. " + active.question[4];
+    }
+
+    if(l.correct >= 5){
+      state.unlocked = Math.max(state.unlocked,state.current+1);
+      $("continue").textContent = "View Round Results";
+    }else{
+      l.index = (l.index+1)%5;
+      $("continue").textContent = "Continue Fishing";
+    }
+
+    $("score").textContent = state.score;
+    $("hudProgress").textContent = l.correct + "/5";
+    save();
+    tabs();
+    renderHome();
+    $("continue").classList.remove("hidden");
+  }
+
+  $("continue").onclick = () => {
+    const l = lesson(state.current);
+    $("questionPanel").classList.add("hidden");
+    questionOpen = false;
+    if(l.correct >= 5){
+      $("completeText").textContent = `You earned ${l.correct*10} points in this round with ${accuracy(state.current)}% accuracy. You caught 5 correct answers.`;
+      $("completeNext").textContent = state.current === 4 ? "Proceed to Stage 5: Practical Python Coding Lab →" : `Proceed to Lesson ${state.current+1}: ${stages[state.current]} →`;
+      $("completeModal").hidden = false;
+    }
+  };
+
+  $("completeNext").onclick = () => {
+    $("completeModal").hidden = true;
+    openStage(state.current === 4 ? 5 : state.current+1);
+  };
+
+  $("startLesson").onclick = () => {
+    started = true;
+    $("studyModal").hidden = true;
+    timer = 90;
+    clearInterval(timerHandle);
+    timerHandle = setInterval(() => {
+      timer = timer ? timer-1 : 90;
+      $("timer").textContent = String(Math.floor(timer/60)).padStart(2,"0")+":"+String(timer%60).padStart(2,"0");
+    },1000);
+    audio();
+  };
+
+  const tasks = [
+    {
+      title:"Simple Pass/Fail Check",
+      desc:"Write a Python program to decide whether a grade of 80 has passed.",
+      req:["Assign grade = 80","Use if grade >= 75:","Print \"Passed\" when true","Use else:","Print \"Failed\" when false"],
+      out:"Passed"
+    },
+    {
+      title:"Simplified Honors Classification",
+      desc:"Use only one indentation level and no nested if blocks. Follow this exact required code structure in your own solution:",
+      req:["grade = 92","","if grade >= 95:","    print(\"With High Honors\")","elif grade >= 90:","    print(\"With Honors\")","elif grade >= 75:","    print(\"Passed\")","else:","    print(\"Failed\")"],
+      out:"With Honors"
+    }
+  ];
+
+  function labIndex(){ return state.lab[0] ? 1 : 0; }
+  function nums(){
+    $("lines").textContent = Array.from({length:Math.max(1,$("editor").value.split("\n").length)},(_,i) => i+1).join("\n");
+  }
+
+  function renderLab(){
+    const i = labIndex(), task = tasks[i];
+    $("labNum").textContent = i+1;
+    $("labTitle").textContent = task.title;
+    $("labDesc").textContent = task.desc;
+    $("requirements").innerHTML = task.req.map(item => "<li>"+esc(item || " ")+"</li>").join("");
+    $("expected").textContent = task.out;
+    $("editor").value = "";
+    nums();
+    $("labFeedback").textContent = "Write your code, then choose Run & Submit Code.";
+    $("nextLab").classList.add("hidden");
+  }
+
+  function validate(i,source){
+    const code = source.replace(/\r\n?/g,"\n").replace(/#.*$/gm,"");
+    const errors = [];
+    const has = regex => regex.test(code);
+    const lines = code.split("\n");
+
+    if(!code.trim()) errors.push("Write your Python code before submitting.");
+
+    if(i === 0){
+      if(!has(/\bgrade\s*=\s*80\b/)) errors.push("Assign grade = 80.");
+      if(!has(/\bif\s+grade\s*>=\s*75\s*:/)) errors.push("Don't forget the colon `:` at the end of your `if` statement!");
+      if(!has(/\belse\s*:/)) errors.push("Add an else: block.");
+      ["Passed","Failed"].forEach(text => {
+        if(!has(new RegExp("print\\s*\\(\\s*[\"']"+text+"[\"']\\s*\\)"))) errors.push(`Add print("${text}").`);
+      });
+    }else{
+      if(!has(/\bgrade\s*=\s*92\b/)) errors.push("Assign grade = 92.");
+      if(!has(/\bif\s+grade\s*>=\s*95\s*:/)) errors.push("Don't forget the colon `:` at the end of your `if` statement!");
+      ["90","75"].forEach(number => {
+        if(!has(new RegExp("\\belif\\s+grade\\s*>=\\s*"+number+"\\s*:"))) errors.push("Add elif grade >= "+number+":");
+      });
+      if(!has(/\belse\s*:/)) errors.push("Add the final else: block.");
+      ["With High Honors","With Honors","Passed","Failed"].forEach(text => {
+        if(!has(new RegExp("print\\s*\\(\\s*[\"']"+text+"[\"']\\s*\\)"))) errors.push(`Add print("${text}").`);
+      });
+      if(lines.some(line => /^( {8,}|\t{2,})\S/.test(line))){
+        errors.push("Deep indentation detected. Use only one indentation level for each print statement; do not nest if blocks.");
+      }
+    }
+    return errors;
+  }
+
+  $("editor").oninput = nums;
+  $("editor").onkeydown = event => {
+    if(event.key === "Tab"){
+      event.preventDefault();
+      const textarea = event.target, position = textarea.selectionStart;
+      textarea.value = textarea.value.slice(0,position)+"    "+textarea.value.slice(textarea.selectionEnd);
+      textarea.selectionStart = textarea.selectionEnd = position+4;
+      nums();
+    }
+  };
+
+  $("resetCode").onclick = () => {
+    $("editor").value = "";
+    nums();
+    $("labFeedback").textContent = "Editor reset. Start with your own Python code.";
+  };
+
+  $("run").onclick = () => {
+    const i = labIndex();
+    const errors = validate(i,$("editor").value);
+    if(errors.length){
+      $("labFeedback").textContent = "Keep trying:\n• " + errors.join("\n• ");
+      return;
+    }
+    state.lab[i] = true;
+    if(i === 1) state.unlocked = Math.max(state.unlocked,6);
+    save();
+    renderHome();
+    $("labFeedback").textContent = "Challenge complete!\nExpected output:\n" + tasks[i].out;
+    $("nextLab").textContent = i === 0 ? "Next Challenge" : "Return to Sea";
+    $("nextLab").classList.remove("hidden");
+  };
+
+  $("nextLab").onclick = () => state.lab.every(Boolean) ? show("home") : renderLab();
+
+  const finals = [pools[0][1],pools[0][3],pools[1][1],pools[1][3],pools[1][6],pools[2][0],pools[2][2],pools[2][5],pools[3][0],pools[3][8]];
+
+  function renderQuiz(){
+    let final = state.final;
+    if(!Array.isArray(final.order) || final.order.length !== 10){
+      state.final = {order:shuffle([...Array(10).keys()]),index:0,correct:0,done:false};
+      final = state.final;
+      save();
+    }
+
+    if(final.done){
+      const pass = final.correct >= 7;
+      $("quizArea").innerHTML = `<h2>${pass ? "Fantastic finish!" : "Keep sailing!"}</h2>
+        <p>You scored <b>${final.correct}/10</b> (${final.correct*10}%).</p>
+        <p>${pass ? "You unlocked your certificate as a Master Python Logic Angler." : "You need 7/10 to unlock the certificate. Review and try again."}</p>
+        <button id="quizGo" class="btn navy" type="button">${pass ? "View Certificate" : "Retry Quiz"}</button>`;
+      $("quizGo").onclick = () => {
+        if(pass){ show("cert"); draw(); }
+        else{
+          state.final = {order:shuffle([...Array(10).keys()]),index:0,correct:0,done:false};
+          save();
+          renderQuiz();
+        }
+      };
+      return;
+    }
+
+    const question = finals[final.order[final.index]];
+    const options = shuffle(question[2].map((text,i) => ({text,correct:i===question[3]})));
+    $("quizArea").innerHTML = `<p class="eyebrow">QUESTION ${final.index+1} OF 10</p>
+      <h2>${esc(question[0])}</h2>${question[1] ? `<pre class="task">${esc(question[1])}</pre>` : ""}
+      <div class="answers">${options.map((option,i) => `<button class="answer" type="button" data-final="${i}">${"ABCD"[i]}. ${esc(option.text)}</button>`).join("")}</div>
+      <p id="finalFeedback" class="feedback"></p>`;
+
+    document.querySelectorAll("[data-final]").forEach(button => button.onclick = () => {
+      if(final.answered) return;
+      final.answered = true;
+      const i = +button.dataset.final;
+      const correct = options[i].correct;
+      document.querySelectorAll("[data-final]").forEach((btn,n) => {
+        btn.disabled = true;
+        if(options[n].correct) btn.classList.add("good");
+      });
+
+      if(correct){
+        final.correct++;
+        state.score += 10;
+        tone(550,.16,"sine",830);
+        $("finalFeedback").className = "feedback ok";
+        $("finalFeedback").textContent = "Correct! +10 points. " + question[4];
+      }else{
+        button.classList.add("bad");
+        tone(160,.25,"sawtooth",95);
+        $("finalFeedback").className = "feedback no";
+        $("finalFeedback").textContent = "Not quite. " + question[4];
+      }
+
+      const next = document.createElement("button");
+      next.className = "btn navy";
+      next.style.marginTop = "8px";
+      next.textContent = final.index === 9 ? "Finish Final Quiz" : "Next Question";
+      next.onclick = () => {
+        final.index++;
+        final.answered = false;
+        if(final.index >= 10){
+          final.done = true;
+          if(final.correct >= 7){
+            state.cert = true;
+            state.date = new Date().toISOString();
+          }
+        }
+        save();
+        renderHome();
+        renderQuiz();
+      };
+      $("quizArea").appendChild(next);
+      save();
+    });
+  }
+
+  function draw(){
+    const canvas = $("certificate");
+    const context = canvas.getContext("2d");
+    const name = (state.first+" "+state.last).trim() || "Student";
+    const date = new Date(state.date || Date.now()).toLocaleDateString("en-PH",{year:"numeric",month:"long",day:"numeric"});
+    const gradient = context.createLinearGradient(0,0,1400,900);
+    gradient.addColorStop(0,"#eafcff");
+    gradient.addColorStop(1,"#fff5ce");
+    context.fillStyle = gradient;
+    context.fillRect(0,0,1400,900);
+    context.strokeStyle = "#087a8c";
+    context.lineWidth = 30;
+    context.strokeRect(30,30,1340,840);
+    context.strokeStyle = "#ffd34e";
+    context.lineWidth = 5;
+    context.strokeRect(60,60,1280,780);
+    context.textAlign = "center";
+    context.fillStyle = "#063b59";
+    context.font = "bold 38px Georgia";
+    context.fillText("CERTIFICATE OF COMPLETION",700,170);
+    context.fillStyle = "#087f8f";
+    context.font = "bold 68px Georgia";
+    context.fillText("Master Python Logic Angler",700,265);
+    context.fillStyle = "#17445f";
+    context.font = "30px Georgia";
+    context.fillText("This certificate is proudly presented to",700,355);
+    context.fillStyle = "#063b59";
+    context.font = "bold 64px Georgia";
+    context.fillText(name,700,450);
+    context.strokeStyle = "#d6ad3e";
+    context.lineWidth = 3;
+    context.beginPath();
+    context.moveTo(330,475);
+    context.lineTo(1070,475);
+    context.stroke();
+    context.fillStyle = "#17445f";
+    context.font = "29px Georgia";
+    context.fillText("for completing the Activity",700,550);
+    context.font = "26px Georgia";
+    context.fillText("Final Quiz Score: "+state.final.correct+"/10",700,610);
+    context.fillText("Completed: "+date,700,655);
+    context.fillStyle = "#087f8f";
+    context.font = "bold 30px Georgia";
+    context.fillText("Phyton Basics Coding - ICT-10",700,755);
+    context.beginPath();
+    context.fillStyle = "#0cb9c3";
+    context.arc(165,130,48,0,Math.PI*2);
+    context.fill();
+    context.fillStyle = "#fff";
+    context.font = "bold 20px Georgia";
+    context.fillText("OFFICIAL",165,135);
+    context.beginPath();
+    context.fillStyle = "#ffd34e";
+    context.arc(1235,760,48,0,Math.PI*2);
+    context.fill();
+  }
+
+  $("download").onclick = () => {
+    draw();
+    const link = document.createElement("a");
+    const filename = ((state.first+"_"+state.last).replace(/[^a-z0-9_-]+/gi,"_") || "student");
+    link.href = $("certificate").toDataURL("image/png");
+    link.download = filename + "_Master_Python_Logic_Angler.png";
+    link.click();
+  };
+
+  function toggleSound(){
+    state.muted = !state.muted;
+    save();
+    renderHome();
+  }
+
+  $("soundHome").onclick = toggleSound;
+  $("soundGame").onclick = toggleSound;
+  $("startGame").onclick = () => openStage(state.current <= state.unlocked ? state.current : 1);
+  $("exit").onclick = () => show("home");
+  document.querySelectorAll(".homeBtn").forEach(button => button.onclick = () => show("home"));
+
+  $("reset").onclick = () => $("resetBox").classList.remove("hidden");
+  $("resetNo").onclick = () => $("resetBox").classList.add("hidden");
+  $("resetYes").onclick = () => {
+    try{ localStorage.removeItem(KEY); }catch(e){}
+    state = blank();
+    $("resetBox").classList.add("hidden");
+    $("loginModal").hidden = false;
+    $("disclaimerModal").hidden = true;
+    $("first").value = "";
+    $("last").value = "";
+    renderHome();
+  };
+
+  $("loginForm").onsubmit = event => {
+    event.preventDefault();
+    const first = $("first").value.trim();
+    const last = $("last").value.trim();
+    if(!first || !last){
+      $("loginError").textContent = "Please enter both your first and last name.";
+      return;
+    }
+    state.first = first;
+    state.last = last;
+    save();
+    $("loginModal").hidden = true;
+    if(!state.ack) $("disclaimerModal").hidden = false;
+    renderHome();
+  };
+
+  $("ack").onclick = () => {
+    state.ack = true;
+    save();
+    $("disclaimerModal").hidden = true;
+    renderHome();
+  };
+
+  renderHome();
+  makeFish();
+
+  if(!state.first || !state.last){
+    $("loginModal").hidden = false;
+    setTimeout(() => $("first").focus(),50);
+  }else if(!state.ack){
+    $("loginModal").hidden = true;
+    $("disclaimerModal").hidden = false;
+  }else{
+    $("loginModal").hidden = true;
+    $("disclaimerModal").hidden = true;
+  }
+})();
+</script>
+ 
+</body></html>
